@@ -1,0 +1,14 @@
+h1 {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 0.5rem;
+  width: 100vw;
+  max-height: 100vh;
+  justify-content: center;
+  align-content: center;
+}
