@@ -10,7 +10,7 @@ export class CellComponent {
   @Input() cellData: Cell;
 
   /**
-   * @desc: creates cell content according to state of the cell
+   * creates cell content according to state of the cell
    */
   getCellContent() {
     return this.cellData.state === CellState.CheckedByPlayer1 ?

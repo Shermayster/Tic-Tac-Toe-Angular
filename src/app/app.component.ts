@@ -11,20 +11,31 @@ export class AppComponent {
   cellList: Cell[];
   firstPlayerTurn = true;
   winner = '';
+
   constructor(private gameService: GameService) {
     this.cellList = this.gameService.getCellList();
   }
 
-  showPlayerTurnMsg(): string {
+  /**
+   * returns winner or player turn message
+   */
+  showTitleMessage(): string {
     return this.winner ? `${this.winner} is a winner!` :
     this.firstPlayerTurn ? 'Player 1 Turn' : 'Player 2 Turn';
   }
+
+  /**
+   * resets the game
+   */
    startNewGame() {
       this.winner = '';
       this.cellList = this.gameService.getCellList();
       this.firstPlayerTurn = true;
    }
 
+   /**
+    * checks if player win the game. if not changed the turn
+    */
    handlePlayerTurn(cellIndex: number): void {
     if (this.winner) {
       return;
