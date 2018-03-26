@@ -30,4 +30,16 @@ describe('AppComponent', () => {
   it('should create cell list', () => {
     expect(component.cellList.length).toBe(9);
   });
+
+  it('should have start button', () => {
+    const button = fixture.debugElement.nativeElement.querySelector('.btn-start-game');
+    expect(button).not.toBeNull();
+    expect(button.innerText).toBe('Start New Game');
+  });
+
+  it('should show player turn', () => {
+    const turnMsg = fixture.debugElement.nativeElement.querySelector('.turn-msg');
+    expect(turnMsg.innerText).toContain('1 Player Turn');
+  });
+
 });

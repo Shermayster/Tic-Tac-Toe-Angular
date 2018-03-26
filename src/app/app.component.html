@@ -1,7 +1,13 @@
 <main class="container">
   <h1>Tic Tac Toe Angular</h1>
-  <div class="grid">
-      <app-cell *ngFor="let cell of cellList"></app-cell>
-  </div>
-
+      <div class="turn-msg">
+        {{showPlayerTurnMsg()}}
+      </div>
+      <div class="grid board">
+          <app-cell *ngFor="let cell of cellList; let i = index"
+          [cellData]='cell'
+          (click)="handlePlayerTurn(i)"
+          ></app-cell>
+      </div>
+  <button (click)="startNewGame()" class="btn-start-game">Start New Game</button>
 </main>

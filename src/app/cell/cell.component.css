@@ -6,4 +6,16 @@
   border-radius: 1rem;
   max-width: 200px;
   max-height: 200px;
+  color: white;
+  font-size: calc(35px + 9vw);
+  text-align: center;
+  vertical-align: super;
+}
+.cell span {
+  text-align: center;
+  vertical-align: super;
+}
+
+.cell:hover {
+  background-color: darkgray;
 }
