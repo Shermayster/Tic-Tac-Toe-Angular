@@ -1,8 +1,8 @@
 <main class="container">
   <h1>Tic Tac Toe Angular</h1>
-      <div class="turn-msg">
+      <h3 class="turn-msg">
         {{showPlayerTurnMsg()}}
-      </div>
+      </h3>
       <div class="grid board">
           <app-cell *ngFor="let cell of cellList; let i = index"
           [cellData]='cell'

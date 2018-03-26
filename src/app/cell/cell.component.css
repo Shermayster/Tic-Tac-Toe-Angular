@@ -1,21 +1,37 @@
 .cell {
   cursor: pointer;
-  width: 30vw;
-  height: 30vw;
-  background-color: #bb4723;
+  width: 80px;
+  height: 80px;
+  background-color: #fbf5d5;
   border-radius: 1rem;
   max-width: 200px;
   max-height: 200px;
-  color: white;
-  font-size: calc(35px + 9vw);
+  color: #673AB7;
+  font-size: 4rem;
   text-align: center;
   vertical-align: super;
 }
 .cell span {
   text-align: center;
-  vertical-align: super;
+  vertical-align: middle;
 }
 
 .cell:hover {
   background-color: darkgray;
+}
+
+@media screen and (min-width: 425px) {
+  .cell {
+    width: 120px;
+    height: 120px;
+    font-size: 6rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cell {
+    width: 200px;
+    height: 200px;
+    font-size: 10rem;
+  }
 }

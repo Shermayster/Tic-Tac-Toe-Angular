@@ -5,11 +5,13 @@ import { Cell, CellState } from '../cell';
   selector: 'app-cell',
   templateUrl: './cell.component.html',
   styleUrls: ['./cell.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CellComponent {
   @Input() cellData: Cell;
 
+  /**
+   * @desc: creates cell content according to state of the cell
+   */
   getCellContent() {
     return this.cellData.state === CellState.CheckedByPlayer1 ?
     '✘' : this.cellData.state === CellState.CheckedByPlayer2 ?

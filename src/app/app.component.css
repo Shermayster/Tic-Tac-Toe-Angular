@@ -1,5 +1,12 @@
-h1 {
+h1, h3 {
   text-align: center;
+}
+
+.btn-start-game {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  width: 20rem;
 }
 
 .grid {

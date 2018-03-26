@@ -39,7 +39,15 @@ describe('AppComponent', () => {
 
   it('should show player turn', () => {
     const turnMsg = fixture.debugElement.nativeElement.querySelector('.turn-msg');
-    expect(turnMsg.innerText).toContain('1 Player Turn');
+    expect(turnMsg.innerText).toContain('Player 1 Turn');
   });
 
+  it('should change plyer title after turn was made', () => {
+    const turnMsg = fixture.debugElement.nativeElement.querySelector('.turn-msg');
+    expect(turnMsg.innerText).toContain('Player 1 Turn');
+    const firstCell = fixture.debugElement.nativeElement.querySelector('.cell');
+    firstCell.click();
+    fixture.detectChanges();
+    expect(turnMsg.innerText).toContain('Player 2 Turn');
+  });
 });
